@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void main() {
+	double BeratApel, BeratJeruk, BeratSemangka;
+	double HargaApel = 24000, HargaJeruk = 32500, HargaSemangka = 8000;
+	double hasil;
+
+	cout << "masukan berat apel(kg):"; cin >> BeratApel;
+	cout << "masukan berat jeruk(kg):"; cin >> BeratJeruk;
+	cout << "masukan berat semangka(kg):"; cin >> BeratSemangka;
+
+	//Hitung total berat dan total harga tanpa diskon
+	double totalberat = BeratApel + BeratJeruk + BeratSemangka;
+	double totalharga = BeratApel * HargaApel + BeratJeruk * HargaJeruk + BeratSemangka * HargaSemangka;
+
+	//Cek dan Terapkan diskon sesuai total berat 
+	if (totalberat >= 10) {
+		hasil = (5.0 / 100) * totalharga;
+	}
+	else if (totalberat >=8) {
+		hasil = (2.0 / 100) * totalharga;
+	}
+	cout << totalharga - hasil;
+
+}
