@@ -12,18 +12,18 @@ void HitungEK(double massa , double kecepatan){
 int main() {
     double massa , kecepatan ;
 
-    cout<< "masukan massa sepeda(kg)";
+    cout<< "masukan total massa(kg)";
     cin>> massa ;
 
     cout<< " Masukan kecepatan sepeda(m/s)";
-    cin>> kecepatan ;
+    cin>> kecepatan;
 
     HitungEK(massa, kecepatan);
 
     //Menghitung Energi kinetik
-    double EnergiKinteik = 0.5 * massa * kecepatan;
+    double EnergiKinetik = 0.5 * massa * kecepatan * kecepatan;
     
-    cout << "EnergiKinetik:"  << "Joule" << endl;
+    cout << "EnergiKinetik:" << EnergiKinetik  << "Joule" << endl;
 
     return 0;
 }
